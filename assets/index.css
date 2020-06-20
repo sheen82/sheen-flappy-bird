@@ -2,8 +2,9 @@
     width: 100%;
     height: 600px;
     background-image: url("../images/sky.png");
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     position: relative;
+    overflow: hidden;
 }
 
 .bird{
@@ -14,6 +15,7 @@
     top: 235px;
     position: absolute;
     background-image: url("../images/birds.png");
+    transition: top .3s linear;
 }
 .start{
     position: absolute;
@@ -25,6 +27,8 @@
     left: 50%;
     margin-left: -100px;
     top: 295px;
+    transition: all .3s linear;
+    cursor: pointer;
 }
 .start.start-white{
     color: white;
