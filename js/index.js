@@ -284,7 +284,7 @@ var bird = {
         });
         this.scoreOrder();
         var len = this.scoreArr.length;
-        this.scoreArr.splice(10,len-10);
+        (len > 10) &&  this.scoreArr.splice(10,len-10);
 
         setLocal("score", this.scoreArr);
     },
