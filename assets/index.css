@@ -44,6 +44,8 @@
     color: white;
     font-weight: bold;
     left: 50%;
+    display: none;
+    z-index: 4;
     transform: translateX(-50%); /*score自身宽度的50% 并非外层容器的50%*/
 }
 .mask{
@@ -56,6 +58,7 @@
     bottom: 0;
     background-color: black;
     opacity: .7;
+    z-index: 2;
 }
 .end{
     position: absolute;
@@ -64,6 +67,7 @@
     transform: translateX(-50%);
     color: red;
     text-align: center;
+    z-index: 3;
 }
 .end .over{
     font-size: 35px;
@@ -92,12 +96,22 @@
 }
 
 .end .rank-list .rank-item .rank-degree{
-    background-color: #ffff99;
+    background-color: #8eb9f5;
     display: inline-block;
     width: 14px;
     height: 14px;
     line-height: 14px;
     text-align: center;
+    color: white;
+}
+.end .rank-list .rank-item .rank-degree.line1{
+    background-color: #f54545;
+}
+.end .rank-list .rank-item .rank-degree.line2{
+    background-color: #ff8547;
+}
+.end .rank-list .rank-item .rank-degree.line3{
+    background-color: #ffac38;
 }
 .end .rank-list .rank-item .rank-score{
     display: inline-block;
@@ -110,4 +124,21 @@
     color: #09f;
     margin-top: 10px;
     cursor: pointer;
+}
+
+.pipe{
+    position: absolute;
+    width: 52px;
+    /*height: 420px;*/
+    /*left: 300px;*/
+    z-index: 1;
+}
+.pipe.pipe-up{
+    top: 0;
+    background-image: url("../images/pipe2.png");
+    background-position-y: bottom;
+}
+.pipe.pipe-bottom{
+    bottom: 0;
+    background-image: url("../images/pipe1.png");
 }
